@@ -1,9 +1,10 @@
 from fastapi import FastAPI,Request
 from fastapi.middleware.cors import CORSMiddleware
-from db.settings import conn
-from config import settings
+from db import Database
+from tasks.Inadimplencia import adicionarTitulos
 import uvicorn
 
+# from controllers import Token
 # # instancia o monitorramento
 # sentry_sdk.init(
 #         dsn="https://b879fb2efdf9369b874dcdae282430b9@o1221283.ingest.us.sentry.io/4507487931727872",
@@ -14,7 +15,7 @@ import uvicorn
 #         # of sampled transactions.
 #         # We recommend adjusting this value in production.
 #         profiles_sample_rate=1.0,
-#)    
+#)
 
 app = FastAPI()
 

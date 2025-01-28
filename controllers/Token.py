@@ -9,7 +9,7 @@ class TokenManeger:
         self._token: Optional[str] = None
         self._token_type: Optional[str] = None
         self._expiration: Optional[datetime] = None
-        self._url = settings.Token_endpoint 
+        self._url = f"{settings.Path_endpoint}{settings._login}"
 
     def get_token(self) -> str:
 
